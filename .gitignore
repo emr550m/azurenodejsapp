@@ -1,5 +1,6 @@
 # WEB
 bundle.js
+bundle.js.map
 *.log
 
 # OSX
