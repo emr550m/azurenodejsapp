@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node src/backend/index",
+    "start": "node index",
     "bundle": "node node_modules/webpack/bin/webpack",
     "postinstall": "node node_modules/webpack/bin/webpack"
   },
