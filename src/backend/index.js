@@ -6,6 +6,11 @@ var log = require("./logger");
 var sessionUtil = require("./utility/session");
 var port = process.env.PORT || 8080;
 
+
+var path = require('path');
+global.appRoot = path.resolve(__dirname);
+console.log(global.appRoot)
+
 db.OpenDB().then((result) => {
     log.info("DB Connection OK: " + result);
 
