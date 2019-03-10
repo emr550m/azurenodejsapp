@@ -1,7 +1,7 @@
 
-export function backend(backendObject){
+export function backend(url, backendObject){
     return new Promise(function(resolve,reject){
-        fetch("/api/open/login", {
+        fetch(url, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

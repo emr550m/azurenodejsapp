@@ -3,7 +3,9 @@ const INITIAL_STATE = {
   page: 'Login',
   loading: false,
   dialog: false,
-  dialogMessage:''
+  dialogMessage: '',
+  username: '',
+  session: ''
 };
 
 export default function app(state = INITIAL_STATE, action) {
@@ -14,11 +16,14 @@ export default function app(state = INITIAL_STATE, action) {
     case 'UPDATE_PAGE':
       return Object.assign({}, state, { page: action.payload.page });
       break;
+    case 'UPDATE_SESSION':
+      return Object.assign({}, state, { username: action.payload.username, session: action.payload.session });
+      break;
     case 'UPDATE_LOADER':
       return Object.assign({}, state, { loading: action.payload.loading });
       break;
-      case 'UPDATE_DIALOG':
-      return Object.assign({}, state, { dialog: action.payload.dialog ,dialogMessage: action.payload.dialogMessage });
+    case 'UPDATE_DIALOG':
+      return Object.assign({}, state, { dialog: action.payload.dialog, dialogMessage: action.payload.dialogMessage });
       break;
     default:
       return state

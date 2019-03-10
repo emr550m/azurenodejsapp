@@ -27,3 +27,14 @@ export function setDialog(dialog,dialogMessage){
         }
     });
 }
+
+
+export function setSession(username,session){
+    store.dispatch({
+        type:'UPDATE_SESSION',
+        payload:{
+            username,
+            session
+        }
+    });
+}
