@@ -2,11 +2,12 @@ var connectionString = process.env['CUSTOMCONNSTR_mongoConnection'] || "mongodb:
 
 const MongoClient = require('mongodb').MongoClient;
 const dbName = 'nodejs';
-const client = new MongoClient(connectionString, { useNewUrlParser: true });
+const client = new MongoClient(connectionString, { useNewUrlParser: true ,useUnifiedTopology: true });
 
 function OpenDB() {
     return new Promise(function (resolve, reject) {
         if (!client.isConnected()) {
+            console.log("client connect:" + connectionString);
             return client.connect(function (err) {
                 if (err == null) {
                     resolve("Connection Success!");

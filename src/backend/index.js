@@ -76,7 +76,7 @@ db.OpenDB().then((result) => {
 
  
  
-    app.listen(port, () => console.log("Server Ready On port 8080"));
+    app.listen(port, () => console.log("Server Ready On port " + port));
 
 }).catch((err) => {
     log.error("DB Connection Not OK!: " + err);
